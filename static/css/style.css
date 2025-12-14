@@ -14,7 +14,6 @@
 
 /* Общие стили */
 body.ddlc-theme {
-    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
