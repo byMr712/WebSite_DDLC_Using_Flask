@@ -1,0 +1,319 @@
+{% extends "base.html" %}
+
+{% block title %}Глоссарий | Doki Doki Literature Club!{% endblock %}
+
+{% block content %}
+    <!-- Заголовок страницы -->
+    <header class="page-header text-center my-5">
+        <h1 class="display-4 fw-bold floating">Глоссарий терминов DDLC</h1>
+        <p class="lead">Термины и понятия из мира Doki Doki Literature Club!</p>
+        <p class="mt-2">На основе информации из русской вики DDLC</p>
+    </header>
+
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+
+            <!-- Термины по категориям -->
+            <div class="glossary-category mb-5" data-category="game">
+                <h2 class="mb-4 border-bottom pb-2">
+                    <i class="bi bi-controller me-2"></i>Игровые термины
+                </h2>
+                
+                <div class="glossary-term mb-4" data-term="визуальная новелла">
+                    <h4 class="term-title">Визуальная новелла (Visual Novel)</h4>
+                    <p class="term-definition">
+                        Жанр компьютерных игр, представляющий собой интерактивную историю с преимущественно 
+                        текстовым повествованием и статичными изображениями персонажей. DDLC начинается как 
+                        типичная романтическая визуальная новелла, но затем подрывает ожидания игроков от жанра.
+                    </p>
+                    <p class="term-example">
+                        <strong>В DDLC:</strong> Игра использует формат визуальной новеллы, но ломает 
+                        его conventions, вводя мета-элементы и психологический хоррор.
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="ренпай">
+                    <h4 class="term-title">Ren'Py</h4>
+                    <p class="term-definition">
+                        Игровой движок с открытым исходным кодом, созданный специально для разработки 
+                        визуальных новелл. DDLC была создана с использованием Ren'Py, что позволило 
+                        разработчикам легко манипулировать стандартными элементами движка для создания 
+                        мета-эффектов.
+                    </p>
+                    <p class="term-example">
+                        <strong>Интересный факт:</strong> Ren'Py использует язык программирования Python, 
+                        что делает его гибким и мощным инструментом для создания интерактивных историй.
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="метафикция">
+                    <h4 class="term-title">Метафикция (Metafiction)</h4>
+                    <p class="term-definition">
+                        Литературный приём, при котором произведение обращает внимание на свою собственную 
+                        вымышленную природу. В DDLC это проявляется в том, что персонажи осознают, что 
+                        находятся в игре, и взаимодействуют с игроком и файловой системой компьютера.
+                    </p>
+                    <p class="term-example">
+                        <strong>Пример в DDLC:</strong> 
+                        <a href="{{ url_for('monika') }}" class="content-link">Моника</a> знает, что она 
+                        персонаж в игре, и может манипулировать игровыми файлами и обращаться напрямую к игроку.
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="четвертая стена">
+                    <h4 class="term-title">Четвёртая стена (Fourth Wall)</h4>
+                    <p class="term-definition">
+                        Условная граница между миром произведения и реальным миром. «Ломание четвёртой стены» — 
+                        когда персонажи обращаются напрямую к зрителю/игроку или демонстрируют осознание того, 
+                        что они находятся в вымышленном произведении.
+                    </p>
+                    <p class="term-example">
+                        <strong>В DDLC:</strong> Персонажи обращаются к игроку, комментируют сохранения игры, 
+                        удаляют файлы персонажей и даже знают о реальном мире игрока.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glossary-category mb-5" data-category="psychology">
+                <h2 class="mb-4 border-bottom pb-2">
+                    <i class="bi bi-heart-pulse me-2"></i>Психологические термины
+                </h2>
+                
+                <div class="glossary-term mb-4" data-term="депрессия">
+                    <h4 class="term-title">Клиническая депрессия</h4>
+                    <p class="term-definition">
+                        Психическое расстройство, характеризующееся стойким снижением настроения, потерей 
+                        интереса к деятельности, нарушениями сна и аппетита, усталостью и чувством безнадёжности. 
+                        <a href="{{ url_for('sayori') }}" class="content-link">Саёри</a> страдает от этого состояния, 
+                        которое она описывает как «дождевое облако».
+                    </p>
+                    <p class="term-example">
+                        <strong>Важно:</strong> Депрессия — это не просто грусть или плохое настроение, 
+                        а серьёзное медицинское состояние, требующее профессионального лечения.
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="самоповреждение">
+                    <h4 class="term-title">Самоповреждающее поведение</h4>
+                    <p class="term-definition">
+                        Намеренное причинение себе физического вреда без суицидальных намерений. Часто 
+                        используется как способ справиться с интенсивными эмоциями или чувством онемения. 
+                        <a href="{{ url_for('yuri') }}" class="content-link">Юри</a> демонстрирует это поведение, 
+                        скрывая шрамы под длинными рукавами.
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="тревожность">
+                    <h4 class="term-title">Социальная тревожность</h4>
+                    <p class="term-definition">
+                        Интенсивный, стойкий страх быть осуждённым или оценённым негативно в социальных 
+                        ситуациях. <a href="{{ url_for('yuri') }}" class="content-link">Юри</a> демонстрирует 
+                        симптомы социальной тревожности: она застенчива, избегает зрительного контакта, 
+                        нервничает в присутствии других людей и испытывает трудности в общении.
+                    </p>
+                    <p class="term-example">
+                        <strong>Симптомы:</strong> Учащённое сердцебиение, потливость, дрожь, тошнота, 
+                        трудности с дыханием в социальных ситуациях.
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="одержимость">
+                    <h4 class="term-title">Одержимость (Obsession)</h4>
+                    <p class="term-definition">
+                        Состояние, при котором мысли, идеи или образы непрерывно вторгаются в сознание, 
+                        вызывая тревогу и дистресс. В DDLC это проявляется у 
+                        <a href="{{ url_for('monika') }}" class="content-link">Моники</a> (одержимость игроком) 
+                        и <a href="{{ url_for('yuri') }}" class="content-link">Юри</a> (одержимость главным героем 
+                        под влиянием Моники).
+                    </p>
+                </div>
+            </div>
+
+            <div class="glossary-category mb-5" data-category="literature">
+                <h2 class="mb-4 border-bottom pb-2">
+                    <i class="bi bi-book me-2"></i>Литературные термины
+                </h2>
+                
+                <div class="glossary-term mb-4" data-term="цундэрэ">
+                    <h4 class="term-title">Цундэрэ (Tsundere)</h4>
+                    <p class="term-definition">
+                        Архетип персонажа в аниме и манге, который изначально ведёт себя грубо, холодно или 
+                        враждебно по отношению к другому персонажу, но постепенно раскрывает свою более тёплую, 
+                        любящую сторону. Нацуки представляет собой классический пример цундэрэ.
+                    </p>
+                    <p class="term-example">
+                        <strong>Характеристики:</strong> Резкость снаружи, мягкость внутри; часто использует 
+                        оскорбления для скрытия своих истинных чувств; постепенное раскрытие доброй стороны.
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="готическая литература">
+                    <h4 class="term-title">Готическая литература</h4>
+                    <p class="term-definition">
+                        Литературный жанр, сочетающий элементы хоррора и романтизма, часто с мрачной атмосферой, 
+                        таинственными событиями и сверхъестественными элементами. 
+                        <a href="{{ url_for('yuri') }}" class="content-link">Юри</a> является поклонницей этого жанра.
+                    </p>
+                    <p class="term-example">
+                        <strong>Примеры авторов:</strong> Эдгар Аллан По, Мэри Шелли, Брэм Стокер, 
+                        Говард Филлипс Лавкрафт.
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="поэтический стиль">
+                    <h4 class="term-title">Поэтические стили в DDLC</h4>
+                    <p class="term-definition">
+                        В DDLC каждый персонаж имеет уникальный поэтический стиль, отражающий его личность 
+                        и внутренний мир. Система написания стихов позволяет игроку влиять на отношения 
+                        с персонажами через выбор слов.
+                    </p>
+                    <table class="table table-sm mt-2">
+                        <thead>
+                            <tr>
+                                <th>Персонаж</th>
+                                <th>Стиль стихов</th>
+                                <th>Темы</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="{{ url_for('sayori') }}" class="content-link">Саёри</a></td>
+                                <td>Простой, детский</td>
+                                <td>Надежда, природа, скрытая грусть</td>
+                            </tr>
+                            <tr>
+                                <td><a href="{{ url_for('yuri') }}" class="content-link">Юри</a></td>
+                                <td>Сложный, интеллектуальный</td>
+                                <td>Тьма, смерть, философия</td>
+                            </tr>
+                            <tr>
+                                <td><a href="{{ url_for('natsuki') }}" class="content-link">Нацуки</a></td>
+                                <td>Прямолинейный</td>
+                                <td>Еда, манга, скрытые чувства</td>
+                            </tr>
+                            <tr>
+                                <td><a href="{{ url_for('monika') }}" class="content-link">Моника</a></td>
+                                <td>Мета-поэзия</td>
+                                <td>Реальность, одиночество, игрок</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="glossary-category mb-5" data-category="technical">
+                <h2 class="mb-4 border-bottom pb-2">
+                    <i class="bi bi-code-slash me-2"></i>Технические термины
+                </h2>
+                
+                <div class="glossary-term mb-4" data-term="файловая манипуляция">
+                    <h4 class="term-title">Файловая манипуляция в DDLC</h4>
+                    <p class="term-definition">
+                        В DDLC игра активно взаимодействует с файловой системой компьютера игрока. 
+                        Персонажи могут удалять файлы сохранений, изменять игровые файлы и даже оставлять 
+                        сообщения в текстовых файлах вне игры. Это ключевой элемент мета-нарратива игры.
+                    </p>
+                    <p class="term-example">
+                        <strong>Примеры:</strong> 
+                        <ul>
+                            <li>Удаление файлов персонажей</li>
+                            <li>Создание файла «первый запуск» после определённых событий</li>
+                            <li>Изменение фоновых изображений и музыки</li>
+                            <li>Оставление сообщений в текстовых файлах</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="пасхалки">
+                    <h4 class="term-title">Пасхалки (Easter Eggs)</h4>
+                    <p class="term-definition">
+                        Скрытые элементы, шутки или отсылки, спрятанные разработчиками в игре. 
+                        DDLC содержит множество пасхалок, включая скрытые сообщения, альтернативные 
+                        концовки и отсылки к другим медиа.
+                    </p>
+                    <p class="term-example">
+                        <strong>Примеры пасхалок в DDLC:</strong>
+                        <ul>
+                            <li>Скрытые сообщения в файлах игры</li>
+                            <li>Альтернативные концовки и сцены</li>
+                            <li>Отсылки к другим играм и медиа</li>
+                            <li>Секретные арты и музыкальные треки</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="glossary-term mb-4" data-term="моды">
+                    <h4 class="term-title">Модификации (Моды / Mods)</h4>
+                    <p class="term-definition">
+                        Изменения или дополнения к оригинальной игре, созданные сообществом. 
+                        Для DDLC существует огромное количество модов, расширяющих оригинальную историю, 
+                        добавляющих новых персонажей или полностью меняющих игровой процесс.
+                    </p>
+                    <p class="term-example">
+                        <strong>Популярные моды:</strong> Exit Music, Blue Skies, 
+                        Salvation, Monika After Story и другие.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Ресурсы для изучения -->
+            <div class="additional-resources mt-5 p-4 rounded">
+                <h3 class="mb-3"><i class="bi bi-link-45deg"></i> Дополнительные ресурсы</h3>
+                <p class="mb-3">
+                    Для более глубокого изучения Doki Doki Literature Club! и связанных тем:
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Официальные ресурсы</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="https://ddlc.moe" target="_blank" class="content-link">
+                                    <i class="bi bi-globe"></i> Официальный сайт DDLC
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" target="_blank" class="content-link">
+                                    <i class="bi bi-steam"></i> DDLC в Steam
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://teamsalvato.com/" target="_blank" class="content-link">
+                                    <i class="bi bi-people"></i> Сайт Team Salvato
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Сообщество и вики</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="https://ddlc.fandom.com/ru/wiki/Doki_Doki_Literature_Club!" target="_blank" class="content-link">
+                                    <i class="bi bi-book"></i> Русская вики DDLC
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="https://www.reddit.com/r/DDLC/" target="_blank" class="content-link">
+                                    <i class="bi bi-reddit"></i> Сообщество Reddit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/ddlc" target="_blank" class="content-link">
+                                    <i class="bi bi-discord"></i> Официальный Discord
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('index') }}" class="btn btn-ddlc me-3">
+                        <i class="bi bi-house"></i> На главную
+                    </a>
+                    <a href="{{ url_for('about') }}" class="btn btn-outline-ddlc">
+                        Об авторе сайта
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

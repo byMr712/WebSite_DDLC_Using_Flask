@@ -1,0 +1,313 @@
+{% extends "base.html" %}
+
+{% block title %}Главная | Doki Doki Literature Club!{% endblock %}
+
+{% block content %}
+    <!-- Заголовок страницы -->
+    <header class="page-header text-center my-5">
+        <h1 class="display-4 fw-bold floating">Doki Doki Literature Club!</h1>
+        <p class="lead">Бесплатная психологическая хоррор-визуальная новелла</p>
+        <p class="mt-2">Разработана Team Salvato и выпущена 22 сентября 2017 года</p>
+    </header>
+
+    <!-- Карусель Bootstrap с изображениями из вики -->
+    <div id="ddlcCarousel" class="carousel slide ddlc-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#ddlcCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#ddlcCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#ddlcCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#ddlcCarousel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../static/images/index/index_main_menu_in_game.webp" 
+                     class="d-block w-100" 
+                     alt="Изображение - Экран приветствия в игре Doki Doki Literature Club!">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Doki Doki Literature Club!</h3>
+                    <p>Бесплатная визуальная  новелла от Team Salvato</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/images/index/index_act2_black_screen.webp" 
+                     class="d-block w-100" 
+                     alt="Изображение - Девушки все вместе из очень редкого чёрно-белого экрана в акте 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Литературный клуб - очень редкий экран акта 2</h3>
+                    <p>Саёри, Юри, Нацуки и Моника</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/images/index/index_poems_create.webp" 
+                     class="d-block w-100" 
+                     alt="Изображение - написания стихов в игре">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Написание стихов</h3>
+                    <p>Создавайте стихи для девушек, используя разные слова</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/images/index/index_poems_gif.gif" 
+                     class="d-block w-100" 
+                     alt="Изображение - Мини версии персонажей подпрыгивают во время написания стихов">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Взаимодействие с персонажами</h3>
+                    <p>Выбор верного слова стиха - прыжок</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#ddlcCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ddlcCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Основная информация об игре -->
+    <section class="game-info mb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="mb-4">Об игре</h2>
+                <p class="text-justify">
+                    <strong>Doki Doki Literature Club!</strong> (сокращённо <strong>DDLC</strong>) — 
+                    бесплатная психологическая хоррор-визуальная новелла, разработанная американской 
+                    студией Team Salvato и выпущенная 22 сентября 2017 года.
+                </p>
+                <p class="text-justify">
+                    Игра начинается как типичная романтическая визуальная новелла, в которой главный 
+                    герой присоединяется к школьному литературному клубу. В клубе он знакомится с 
+                    четырьмя девушками:
+                    <a href="{{ url_for('natsuki') }}" class="content-link">Нацуки</a>,
+                    <a href="{{ url_for('sayori') }}" class="content-link">Саёри</a>, 
+                    <a href="{{ url_for('yuri') }}" class="content-link">Юри</a> и
+                    <a href="{{ url_for('monika') }}" class="content-link">Моника</a>
+                </p>
+                <p class="text-justify">
+                    По мере развития сюжета игра раскрывает свои истинные жанры: психологический хоррор 
+                    и метафикцию. DDLC известна тем, что ломает четвёртую стену и манипулирует файлами 
+                    игры на компьютере игрока.
+                </p>
+                
+                <div class="game-specs mt-4 p-3 rounded">
+                    <h5 class="mb-3">Характеристики игры:</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><strong>Разработчик:</strong> Team Salvato</li>
+                                <li><strong>Издатель:</strong> Team Salvato</li>
+                                <li><strong>Дата выхода:</strong> 22 сентября 2017</li>
+                                <li><strong>Жанр:</strong> Визуальная новелла</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><strong>Платформы:</strong> Windows, macOS, Linux</li>
+                                <li><strong>Движок:</strong> Ren'Py</li>
+                                <li><strong>Возрастной рейтинг:</strong> 16+</li>
+                                <li><strong>Цена:</strong> Бесплатно</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="https://ddlc.moe" target="_blank" class="btn btn-ddlc me-3">
+                        <i class="bi bi-download"></i> Официальный сайт
+                    </a>
+                    <a href="https://ddlc.fandom.com/ru/wiki/Doki_Doki_Literature_Club!" target="_blank" class="btn btn-outline-ddlc">
+                        <i class="bi bi-info-circle"></i> Вики Doki Doki Literature Club
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <figure class="figure-custom">
+                    <img src="../static/images/index/index_default.webp" 
+                         alt="Скриншот из игры - знакомство с клубом" 
+                         class="img-fluid rounded shadow">
+                    <figcaption class="figure-caption mt-2">
+                        Главный герой знакомится с членами литературного клуба
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Система написания стихов -->
+    <section class="poetry-system mb-5">
+        <h2 class="text-center mb-4">Система написания стихов</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-pencil display-4 mb-3 text-pink"></i>
+                        <h5 class="card-title">Выбор слов</h5>
+                        <p class="card-text">
+                            Игрок выбирает слова для своего стихотворения из предложенного списка. 
+                            Каждое слово имеет определённую тематику, которая нравится конкретным персонажам.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-heart display-4 mb-3 text-purple"></i>
+                        <h5 class="card-title">Влияние на отношения</h5>
+                        <p class="card-text">
+                            Выбор слов влияет на то, какая из девушек проявит больший интерес к главному герою. 
+                            У каждой героини свои литературные предпочтения.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-book display-4 mb-3 text-blue"></i>
+                        <h5 class="card-title">Уникальные стихи</h5>
+                        <p class="card-text">
+                            Каждая девушка пишет стихи в своём уникальном стиле, отражающем её личность 
+                            и внутренний мир. Стихи раскрывают характеры персонажей.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карточки персонажей с изображениями из вики -->
+    <section class="characters-section mb-5">
+        <h2 class="text-center mb-5">Персонажи литературного клуба</h2>
+        <div class="row">
+            <!-- Нацуки -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 character-card natsuki-theme">
+                    <img src="../static/images/index/index_natsuki_sticker.webp" 
+                         class="card-img-top" 
+                         alt="Нацуки - цундэрэ любительница манги">
+                    <div class="card-body">
+                        <h5 class="card-title">Нацуки</h5>
+                        <p class="card-text">
+                           Девушка с характером цундэрэ, увлекающаяся мангой. Несмотря на резкий характер в начале игры, 
+                            внутри она добрая и заботливая.
+                        </p>
+                        <div class="character-traits">
+                            <span class="badge bg-yellow">Цундэрэ</span>
+                            <span class="badge bg-yellow">Упрямая</span>
+                            <span class="badge bg-yellow">Манга</span>
+                        </div>
+                        <a href="{{ url_for('natsuki') }}" class="btn btn-ddlc w-100 mt-3">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Моника -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 character-card monika-theme">
+                    <img src="../static/images/index/index_monika_sticker.webp" 
+                         class="card-img-top" 
+                         alt="Моника - президент литературного клуба">
+                    <div class="card-body">
+                        <h5 class="card-title">Моника</h5>
+                        <p class="card-text">
+                            Президент литературного клуба. Умная, популярная и талантливая девушка, 
+                            которая всегда готова помочь другим членам клуба.
+                        </p>
+                        <div class="character-traits">
+                            <span class="badge bg-pink">Лидер</span>
+                            <span class="badge bg-pink">Талантливая</span>
+                            <span class="badge bg-pink">Осознающая</span>
+                        </div>
+                        <a href="{{ url_for('monika') }}" class="btn btn-ddlc w-100 mt-3">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Саёри -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 character-card sayori-theme">
+                    <img src="../static/images/index/index_sayori_sticker.webp" 
+                         class="card-img-top" 
+                         alt="Саёри - вице-президент литературного клуба">
+                    <div class="card-body">
+                        <h5 class="card-title">Саёри</h5>
+                        <p class="card-text">
+                            Вице-президент клуба и лучшая подруга главного героя. Весёлая, энергичная, 
+                            но скрывающая свою депрессию за улыбкой.
+                        </p>
+                        <div class="character-traits">
+                            <span class="badge bg-blue">Весёлая</span>
+                            <span class="badge bg-blue">Добрая</span>
+                            <span class="badge bg-blue">Депрессия</span>
+                        </div>
+                        <a href="{{ url_for('sayori') }}" class="btn btn-ddlc w-100 mt-3">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Юри -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 character-card yuri-theme">
+                    <img src="../static/images/index/index_yuri_sticker.webp" 
+                         class="card-img-top" 
+                         alt="Юри - застенчивая любительница литературы">
+                    <div class="card-body">
+                        <h5 class="card-title">Юри</h5>
+                        <p class="card-text">
+                            Застенчивая и интеллектуальная девушка, увлекающаяся сложной литературой. 
+                            Обладает богатым словарным запасом и любит романы ужасов.
+                        </p>
+                        <div class="character-traits">
+                            <span class="badge bg-purple">Умная</span>
+                            <span class="badge bg-purple">Застенчивая</span>
+                            <span class="badge bg-purple">Интроверт</span>
+                        </div>
+                        <a href="{{ url_for('yuri') }}" class="btn btn-ddlc w-100 mt-3">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+    <!-- Особенности игры -->
+    <section class="features mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="info-box p-4 rounded">
+                    <h3 class="mb-3">Особенности игры: </h3>
+                    <ul>
+                        <li><strong>Мета-элементы:</strong> Игра ломает четвёртую стену и взаимодействует с файлами на компьютере игрока</li>
+                        <li><strong>Психологический хоррор:</strong> За милой внешностью скрываются глубокие психологические темы</li>
+                        <li><strong>Множественные концовки:</strong> В игре есть несколько вариантов завершения истории</li>
+                        <li><strong>Бесплатность:</strong> Игра полностью бесплатна и доступна для скачивания на официальном сайте</li>
+                        <li><strong>Модификации:</strong> Активное сообщество создаёт моды, расширяющие оригинальную историю</li>
+                    </ul>
+                    
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('glossary') }}" class="btn btn-outline-ddlc me-3">Глоссарий терминов</a>
+                        <a href="https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" target="_blank" class="btn btn-ddlc">
+                            <i class="bi bi-steam"></i> Страница в Steam
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Автозапуск карусели
+    document.addEventListener('DOMContentLoaded', function() {
+        var myCarousel = document.querySelector('#ddlcCarousel');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 4000,
+            wrap: true
+        });
+    });
+</script>
+{% endblock %}

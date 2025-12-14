@@ -1,0 +1,445 @@
+{% extends "base.html" %}
+
+{% block title %}Нацуки | Doki Doki Literature Club!{% endblock %}
+
+{% block content %}
+    <!-- Заголовок страницы -->
+    <header class="page-header text-center my-5">
+        <h1 class="display-4 fw-bold floating">Нацуки</h1>
+        <p class="lead">Цундэрэ любительница манги</p>
+        <p class="mt-2">«Я-я не цундэрэ! Просто... иногда ты меня бесишь!»</p>
+    </header>
+
+    <div class="row">
+        <!-- Основной контент -->
+        <div class="col-lg-8">
+            <section class="biography mb-5">
+                <h2 class="mb-4">Общая информация</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure class="figure-custom">
+                            <img src="../static/images/natsuki/natsuki_default.webp" 
+                                 alt="Нацуки - Внешний вид персонажа"
+                                 class="img-fluid rounded shadow">
+                            <figcaption class="figure-caption">
+                                Внешний вид персонажа
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="text-justify">
+                            <strong>Нацуки</strong> — самая молодая участница литературного клуба и классический 
+                            пример персонажа-цундэрэ. Она представлена как грубоватая, вспыльчивая девушка, 
+                            которая увлекается мангой и аниме.
+                        </p>
+                        <p class="text-justify">
+                            Несмотря на свою внешнюю резкость и склонность к сарказму, Нацуки на самом деле 
+                            добрая и заботливая девушка. Она скрывает свою мягкую натуру за маской грубости, 
+                            боясь показаться слабой или уязвимой.
+                        </p>
+                        <p class="text-justify">
+                            Нацуки страдает от проблем в семье, в частности от жестокого обращения со стороны 
+                            отца, что приводит к недостаточному питанию и низкой самооценке. Её любовь к выпечке 
+                            и манге — это способы逃避 от суровой реальности.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="appearance mb-5">
+                <h2 class="mb-4">Внешность и личность</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="text-justify">
+                            Нацуки — невысокая девушка с короткими розовыми волосами, собранными в два хвостика 
+                            красными лентами, и красными глазами. Она самая маленькая по росту среди всех 
+                            участниц клуба, что часто становится предметом её комплексов.
+                        </p>
+                        <p class="text-justify">
+                            На поверхности Нацуки кажется грубой, саркастичной и легко раздражающейся. 
+                            Она часто использует оскорбления («бакэ!» — «дурак!» на японском) и проявляет 
+                            агрессию как защитный механизм. Это классические черты цундэрэ.
+                        </p>
+                        <p class="text-justify">
+                            Однако под этой грубой оболочкой скрывается добрая, ранимая и заботливая девушка. 
+                            Она тайно печёт кексы и пирожные для членов клуба, проявляет заботу о других 
+                            (хотя и делает это грубовато) и обладает сильным чувством справедливости.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Характеристики</h5>
+                                <table class="table table-sm">
+                                    <tr>
+                                        <td><strong>Имя:</strong></td>
+                                        <td>Нацуки</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Роль:</strong></td>
+                                        <td>Член клуба</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Возраст:</strong></td>
+                                        <td>18 лет</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Рост:</strong></td>
+                                        <td>147 см (самая низкая)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Цвет волос:</strong></td>
+                                        <td>Розовый</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Цвет глаз:</strong></td>
+                                        <td>Красный</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tsundere mb-5">
+                <h2 class="mb-4">Цундэрэ: личность Нацуки</h2>
+                
+                <p class="text-justify">
+                    Нацуки является классическим примером архетипа «цундэрэ» — персонажа, который изначально 
+                    ведёт себя грубо, холодно или враждебно, но постепенно раскрывает свою более тёплую, 
+                    любящую сторону по мере развития отношений.
+                </p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Цун (Tsun) - Холодная сторона</h5>
+                                <ul>
+                                    <li>Грубость и сарказм как защитный механизм</li>
+                                    <li>Легко раздражается и выходит из себя</li>
+                                    <li>Использует оскорбления («бакэ!», «идиот!»)</li>
+                                    <li>Отрицает свои истинные чувства</li>
+                                    <li>Действует агрессивно, когда смущается</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Дэрэ (Dere) - Мягкая сторона</h5>
+                                <ul>
+                                    <li>Тайно печёт сладости для друзей</li>
+                                    <li>Проявляет заботу, маскируя её под грубость</li>
+                                    <li>Становится мягкой, когда чувствует себя в безопасности</li>
+                                    <li>Имеет доброе сердце и сильное чувство справедливости</li>
+                                    <li>Верный и преданный друг</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-justify mt-4">
+                    Поведение Нацуки как цундэрэ — это не просто черта характера, а защитный механизм. 
+                    Выросшая в жестокой семейной обстановке, она научилась скрывать свою уязвимость за 
+                    маской агрессии. Её грубость — это стена, которую она построила, чтобы защитить себя 
+                    от боли и унижения.
+                </p>
+            </section>
+
+            <section class="family mb-5">
+                <h2 class="mb-4">Семейные проблемы</h2>
+                
+                <p class="text-justify">
+                    Нацуки живёт в токсичной семейной среде с отцом, который жестоко обращается с ней. 
+                    Её отец контролирует её жизнь, ограничивает питание и проявляет эмоциональное 
+                    насилие. Эти обстоятельства сильно влияют на её личность и поведение.
+                </p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Проявления жестокого обращения</h5>
+                                <ul>
+                                    <li><strong>Недостаточное питание:</strong> Отец ограничивает её еду, что объясняет её маленький рост</li>
+                                    <li><strong>Эмоциональное насилие:</strong> Постоянная критика и унижение</li>
+                                    <li><strong>Контроль:</strong> Строгие ограничения и правила</li>
+                                    <li><strong>Запрет на мангу:</strong> Отец презирает её увлечение, считая это «детским»</li>
+                                    <li><strong>Отсутствие поддержки:</strong> Никто не защищает её интересы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Как это влияет на Нацуки</h5>
+                                <ul>
+                                    <li>Низкая самооценка и комплексы по поводу роста</li>
+                                    <li>Агрессия как защитный механизм</li>
+                                    <li>Трудности с доверием к другим</li>
+                                    <li>Страх показать уязвимость</li>
+                                    <li>Скрывание своих истинных интересов и чувств</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-justify mt-4">
+                    Несмотря на эти трудности, Нацуки находит утешение в выпечке и манге. Кулинария 
+                    становится для неё способом проявить заботу о других, а манга —逃避ством от суровой 
+                    реальности. Литературный клуб становится для неё местом, где она может быть собой, 
+                    пусть и не сразу открывая свою истинную натуру.
+                </p>
+            </section>
+
+            <section class="hobbies mb-5">
+                <h2 class="mb-4">Увлечения и интересы</h2>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Выпечка и кулинария</h5>
+                                <p class="card-text">
+                                    Нацуки — талантливая пекарша, которая особенно любит готовить сладости. 
+                                    Её кексы и пирожные становятся легендарными среди членов клуба.
+                                </p>
+                                <ul>
+                                    <li>Специализируется на выпечке</li>
+                                    <li>Любит готовить для друзей (хотя и отрицает это)</li>
+                                    <li>Видит в кулинарии форму заботы</li>
+                                    <li>Её рецепты отражают её внимание к деталям</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Манга и аниме</h5>
+                                <p class="card-text">
+                                    Нацуки — страстная фанатка манги, что отражается в её литературных 
+                                    предпочтениях и стиле письма.
+                                </p>
+                                <ul>
+                                    <li>Коллекционирует мангу (скрывает от отца)</li>
+                                    <li>Черпает вдохновение в сёдзё-манге</li>
+                                    <li>Защищает мангу как legitimate литературную форму</li>
+                                    <li>Её стихи часто содержат элементы манги</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="poetry mb-5">
+                <h2 class="mb-4">Стихи Нацуки</h2>
+                <p class="text-justify">
+                    Стихи Нацуки отражают её прямолинейный характер и увлечения. Они просты по форме, 
+                    но содержат глубокий эмоциональный подтекст, часто используя кулинарные метафоры 
+                    для выражения чувств.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Особенности стиля</h5>
+                                <ul>
+                                    <li>Прямолинейный, простой язык</li>
+                                    <li>Использование кулинарных метафор</li>
+                                    <li>Короткие, энергичные строки</li>
+                                    <li>Темы еды, сладостей и комфорта</li>
+                                    <li>Скрытые эмоции за простыми словами</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card natsuki-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Пример стиха Нацуки</h5>
+                                <p class="fst-italic">
+                                    "Кекс с вишней наверху<br>
+                                    Сладкий, мягкий, полный любви<br>
+                                    Но съесть его боишься<br>
+                                    Вдруг внутри окажется горечь"
+                                </p>
+                                <p class="small mt-2">
+                                    Этот стих метафорически описывает страх Нацуки быть отвергнутой: 
+                                    внешне она кажется грубой и неприступной, но внутри скрывает 
+                                    доброе сердце и боится, что другие увидят её уязвимость.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relationships mb-5">
+                <h2 class="mb-4">Отношения с другими персонажами</h2>
+                
+                <div class="relationship-item mb-4">
+                    <h5>С главным героем</h5>
+                    <p class="text-justify">
+                        Нацуки изначально ведёт себя грубо по отношению к главному герою, но постепенно 
+                        смягчается. Она ценит его интерес к её выпечке и манге, что редко встречает 
+                        среди других людей. Постепенно она начинает доверять ему и даже проявлять 
+                        романтический интерес, хотя и скрывает его за грубостью.
+                    </p>
+                </div>
+                
+                <div class="relationship-item mb-4">
+                    <h5>С <a href="{{ url_for('sayori') }}" class="content-link">Саёри</a></h5>
+                    <p class="text-justify">
+                        Несмотря на внешние различия, Нацуки и Саёри имеют тёплые отношения. Саёри 
+                        часто помогает Нацуки с выпечкой и искренне восхищается её кулинарными 
+                        способностями. Нацуки, в свою очередь, терпит (и даже тайно любит) 
+                        энергичность Саёри.
+                    </p>
+                </div>
+                
+                <div class="relationship-item mb-4">
+                    <h5>С <a href="{{ url_for('yuri') }}" class="content-link">Юри</a></h5>
+                    <p class="text-justify">
+                        Отношения Нацуки и Юри напряжённые. Нацуки презирает сложный, интеллектуальный 
+                        стиль Юри, считая его напыщенным и снобистским. Юри, в свою очередь, смотрит 
+                        свысока на простой стиль Нацуки и её увлечение мангой. Их конфликт достигает 
+                        пика во время спора о литературных предпочтениях.
+                    </p>
+                </div>
+                
+                <div class="relationship-item">
+                    <h5>С <a href="{{ url_for('monika') }}" class="content-link">Моникой</a></h5>
+                    <p class="text-justify">
+                        Нацуки уважает Монику как президента клуба, но не подозревает о её истинной 
+                        природе. Моника знает о семейных проблемах Нацуки и использует эту информацию 
+                        для манипуляции, усиливая её конфликты с Юри и подрывая её уверенность в себе.
+                    </p>
+                </div>
+            </section>
+
+            <section class="trivia mb-5">
+                <h2 class="mb-4">Интересные факты</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Имя Нацуки означает «лето» и «надежда» на японском</li>
+                            <li>Она самая низкая из всех девушек в клубе (147 см)</li>
+                            <li>Нацуки — левша, что видно по тому, как она держит ручку</li>
+                            <li>Её розовые волосы символизируют её юность и энергичность</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>В ранних концепциях у Нацуки были синие волосы</li>
+                            <li>Она единственная, кто регулярно приносит в клуб домашнюю выпечку</li>
+                            <li>Нацуки коллекционирует фигурки из манги (парафилия)</li>
+                            <li>Её комната отражает её увлечения: полки с мангой и кухонная утварь</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-3">
+                    <p class="mb-0">
+                        <strong>Источник:</strong> Информация взята с 
+                        <a href="https://ddlc.fandom.com/ru/wiki/Нацуки" target="_blank">страницы Нацуки в вики DDLC</a>.
+                    </p>
+                </div>
+            </section>
+
+            <div class="navigation-buttons text-center mt-5">
+                <a href="{{ url_for('index') }}" class="btn btn-ddlc me-3">
+                    <i class="bi bi-house"></i> На главную
+                </a>
+                <a href="{{ url_for('monika') }}" class="btn btn-outline-ddlc me-3">Моника</a>
+                <a href="{{ url_for('sayori') }}" class="btn btn-outline-ddlc me-3">Саёри</a>
+                <a href="{{ url_for('yuri') }}" class="btn btn-outline-ddlc me-3">Юри</a>
+                <a href="https://ddlc.fandom.com/ru/wiki/Нацуки" target="_blank" class="btn btn-outline-ddlc">
+                    <i class="bi bi-box-arrow-up-right"></i> Вики DDLC
+                </a>
+            </div>
+        </div>
+
+        <!-- Боковая панель -->
+        <aside class="col-lg-4">
+            <div class="sidebar-sticky">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-link"></i> Быстрая навигация</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="{{ url_for('index') }}" class="btn btn-outline-ddlc">На главную</a>
+                            <a href="{{ url_for('monika') }}" class="btn btn-outline-ddlc">Моника</a>
+                            <a href="{{ url_for('sayori') }}" class="btn btn-outline-ddlc">Саёри</a>
+                            <a href="{{ url_for('yuri') }}" class="btn btn-outline-ddlc">Юри</a>
+                            <a href="{{ url_for('glossary') }}" class="btn btn-outline-secondary">Глоссарий</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-music-note-beamed"></i> Музыкальные темы</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>Okay, Everyone!</strong>
+                                <p class="small mb-1">Основная тема Нацуки</p>
+                                <a href="https://www.youtube.com/watch?v=BDsCNVj72ig" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                            <li class="mb-2 mt-3">
+                                <strong>Poet Panic</strong>
+                                <p class="small mb-1">Ссора Юри и Нацуки</p>
+                                <a href="https://www.youtube.com/watch?v=7JDlEpvE-cs" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                            <li class="mt-3">
+                                <strong>Play With Me</strong>
+                                <p class="small mb-1">Выпечка кексов с Нацуки</p>
+                                <a href="https://www.youtube.com/watch?v=BUKN_ySpqU4" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 natsuki-theme">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-quote"></i> Знаменитые цитаты</h5>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote">
+                            <p class="mb-2">«Хмф! Это не потому что я забочусь о тебе или что-то в этом роде! Просто... у меня было лишнее!»</p>
+                            <footer class="blockquote-footer">Нацуки, предлагая кекс</footer>
+                        </blockquote>
+                        <hr>
+                        <blockquote class="blockquote mt-3">
+                            <p class="mb-2">«Манга — это тоже литература! Она может передавать глубокие эмоции и истории!»</p>
+                            <footer class="blockquote-footer">Нацуки защищает своё увлечение</footer>
+                        </blockquote>
+                        <hr>
+                        <blockquote class="blockquote mt-3">
+                            <p class="mb-2">«Я не цундэрэ! Я просто... говорю то, что думаю!»</p>
+                            <footer class="blockquote-footer">Нацуки отрицает себя</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+{% endblock %}

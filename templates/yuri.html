@@ -1,0 +1,372 @@
+{% extends "base.html" %}
+
+{% block title %}Юри | Doki Doki Literature Club!{% endblock %}
+
+{% block content %}
+    <!-- Заголовок страницы -->
+    <header class="page-header text-center my-5">
+        <h1 class="display-4 fw-bold floating">Юри</h1>
+        <p class="lead">Застенчивая любительница литературы</p>
+        <p class="mt-2">«Иногда самые тёмные истории скрывают самые глубокие истины.»</p>
+    </header>
+
+    <div class="row">
+        <!-- Основной контент -->
+        <div class="col-lg-8">
+            <section class="biography mb-5">
+                <h2 class="mb-4">Общая информация</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure class="figure-custom">
+                            <img src="../static/images/yuri/yuri_default.webp" 
+                                 alt="Юри - Внешний вид персонажа" 
+                                 class="img-fluid rounded shadow">
+                            <figcaption class="figure-caption">
+                                ЮВнешний вид персонажа
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="text-justify">
+                            <strong>Юри</strong> — самая застенчивая и интеллектуальная член литературного клуба. 
+                            Она представлена как тихая, вежливая девушка с богатым словарным запасом и 
+                            глубоким знанием литературы.
+                        </p>
+                        <p class="text-justify">
+                            Юри увлекается сложной литературой, особенно романами ужасов и психологическими 
+                            триллерами. Она обладает аналитическим умом и часто цитирует классиков во время 
+                            разговоров.
+                        </p>
+                        <p class="text-justify">
+                            Под её спокойной внешностью скрываются глубокие психологические проблемы, включая 
+                            социальную тревожность и склонность к самоповреждению. Эти проблемы усугубляются 
+                            вмешательством <a href="{{ url_for('monika') }}" class="content-link">Моники</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="appearance mb-5">
+                <h2 class="mb-4">Внешность и личность</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="text-justify">
+                            Юри — самая высокая девушка в литературном клубе (170 см). У неё длинные 
+                            тёмно-фиолетовые волосы и фиолетовые глаза. Она носит стандартную школьную 
+                            форму, но часто скрещивает руки, что является защитным жестом.
+                        </p>
+                        <p class="text-justify">
+                            Юри крайне застенчива и испытывает социальную тревожность. Ей трудно 
+                            поддерживать зрительный контакт, и она часто нервничает в присутствии других 
+                            людей. Когда она волнуется, она играет с прядью своих волос.
+                        </p>
+                        <p class="text-justify">
+                            Несмотря на застенчивость, Юри невероятно умна и начитана. Она имеет богатый 
+                            словарный запас и глубокие знания в литературе, особенно в жанре хоррора и 
+                            психологических триллеров.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card yuri-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Характеристики</h5>
+                                <table class="table table-sm">
+                                    <tr>
+                                        <td><strong>Имя:</strong></td>
+                                        <td>Юри</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Роль:</strong></td>
+                                        <td>Член клуба</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Возраст:</strong></td>
+                                        <td>18 лет</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Рост:</strong></td>
+                                        <td>170 см</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Цвет волос:</strong></td>
+                                        <td>Тёмно-фиолетовый</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Цвет глаз:</strong></td>
+                                        <td>Фиолетовый</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="psychological mb-5">
+                <h2 class="mb-4">Психологические аспекты</h2>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card yuri-theme mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Социальная тревожность</h5>
+                                <p class="card-text">
+                                    Юри испытывает сильную тревогу в социальных ситуациях. Ей трудно 
+                                    общаться с людьми, поддерживать зрительный контакт и выражать 
+                                    свои мысли вслух.
+                                </p>
+                                <ul class="small">
+                                    <li>Избегает социальных взаимодействий</li>
+                                    <li>Испытывает панику при внимании к себе</li>
+                                    <li>Имеет низкую самооценку</li>
+                                    <li>Боится быть осуждённой</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card yuri-theme mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Самоповреждающее поведение</h5>
+                                <p class="card-text">
+                                    Юри имеет склонность к самоповреждению, которую она скрывает под 
+                                    длинными рукавами. Это её способ справляться с интенсивными эмоциями.
+                                </p>
+                                <ul class="small">
+                                    <li>Режет себя лезвиями</li>
+                                    <li>Скрывает шрамы</li>
+                                    <li>Испытывает стыд за своё поведение</li>
+                                    <li>Не может контролировать импульсы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="obsessive-card mt-4">
+                    <h5>Одержимость и манипуляция</h5>
+                    <p class="text-justify">
+                        Когда игрок выбирает Юри как основную героиню, её личность начинает резко меняться 
+                        под влиянием манипуляций <a href="{{ url_for('monika') }}" class="content-link">Моники</a>.
+                    </p>
+                    <p class="text-justify">
+                        Её застенчивость превращается в болезненную одержимость главным героем. Она становится 
+                        навязчивой, ревнивой и эмоционально нестабильной. Её привычка к самоповреждению 
+                        усиливается, становясь более частой и опасной.
+                    </p>
+                    <p class="text-justify">
+                        В кульминационной сцене Юри полностью теряет контроль над собой. Её речь становится 
+                        бессвязной, глаза неестественно расширяются, и она впадает в состояние психотического 
+                        экстаза перед своей трагической смертью.
+                    </p>
+                </div>
+            </section>
+
+            <section class="literature mb-5">
+                <h2 class="mb-4">Литературные предпочтения</h2>
+                <p class="text-justify">
+                    Юри — самая начитанная девушка в литературном клубе. Она предпочитает сложную, 
+                    интеллектуальную литературу с глубоким психологическим подтекстом.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card yuri-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Любимые авторы</h5>
+                                <ul>
+                                    <li><strong>Эдгар Аллан По</strong> — мастер готического хоррора</li>
+                                    <li><strong>Говард Филлипс Лавкрафт</strong> — космический ужас</li>
+                                    <li><strong>Фёдор Достоевский</strong> — психологическая глубина</li>
+                                    <li><strong>Владимир Набоков</strong> — сложный стиль</li>
+                                    <li><strong>Стивен Кинг</strong> — современный хоррор</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card yuri-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Любимые произведения</h5>
+                                <ul>
+                                    <li>«Падение дома Ашеров» (Эдгар Аллан По)</li>
+                                    <li>«Зов Ктулху» (Говард Филлипс Лавкрафт)</li>
+                                    <li>«Преступление и наказание» (Фёдор Достоевский)</li>
+                                    <li>«Лолита» (Владимир Набоков)</li>
+                                    <li>«Сияние» (Стивен Кинг)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="poetry mb-5">
+                <h2 class="mb-4">Стихи Юри</h2>
+                <p class="text-justify">
+                    Стихи Юри — самые сложные и многослойные в игре. Они наполнены богатой лексикой, 
+                    сложными метафорами и глубоким психологическим содержанием.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card yuri-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Особенности стиля</h5>
+                                <ul>
+                                    <li>Использование редких и сложных слов</li>
+                                    <li>Многослойные метафоры</li>
+                                    <li>Тёмные, готические темы</li>
+                                    <li>Философские размышления</li>
+                                    <li>Психологическая глубина</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-6">
+                        <div class="card yuri-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Пример стиха Юри</h5>
+                                    <p class="fst-italic">
+                                        "В глубине зеркала<br>
+                                        Обитает другая я<br>
+                                        С кровавыми пальцами<br>
+                                        И глазами без души<br>
+                                        <br>
+                                        Она шепчет мне по ночам<br>
+                                        Слова, которые я боюсь понять<br>
+                                        Приглашая присоединиться<br>
+                                        К вечному танцу в темноте"
+                                    </p>
+                        <p class="small mt-2">
+                            Этот стих отражает внутреннюю борьбу Юри с её демонами и склонностью 
+                            к самоповреждению.
+                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="trivia mb-5">
+                <h2 class="mb-4">Интересные факты</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Имя Юри означает «лилия» на японском</li>
+                            <li>Она самая высокая из всех девушек в клубе</li>
+                            <li>Юри — эксперт по завариванию чая, особенно травяных сборов</li>
+                            <li>У неё коллекция ножей, которые она использует для резки бумаги</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Её фиолетовый цвет волос символизирует королевское достоинство и тайну</li>
+                            <li>Юри интересуется оккультизмом и паранормальными явлениями</li>
+                            <li>Она единственная, кто носит школьную форму правильно</li>
+                            <li>Её поза со скрещенными руками — защитный жест</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-3">
+                    <p class="mb-0">
+                        <strong>Источник:</strong> Информация взята с 
+                        <a href="https://ddlc.fandom.com/ru/wiki/Юри" target="_blank">страницы Юри в вики DDLC</a>.
+                    </p>
+                </div>
+            </section>
+
+            <div class="navigation-buttons text-center mt-5">
+                <a href="{{ url_for('index') }}" class="btn btn-ddlc me-3">
+                    <i class="bi bi-house"></i> На главную
+                </a>
+                <a href="{{ url_for('natsuki') }}" class="btn btn-outline-ddlc">Нацуки</a>
+                <a href="{{ url_for('monika') }}" class="btn btn-outline-ddlc me-3">Моника</a>
+                <a href="{{ url_for('sayori') }}" class="btn btn-outline-ddlc me-3">Саёри</a>
+                <a href="https://ddlc.fandom.com/ru/wiki/Юри" target="_blank" class="btn btn-outline-ddlc">
+                    <i class="bi bi-box-arrow-up-right"></i> Вики DDLC
+                </a>
+            </div>
+        </div>
+
+        <!-- Боковая панель -->
+        <aside class="col-lg-4">
+            <div class="sidebar-sticky">
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-link"></i> Быстрая навигация</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="{{ url_for('index') }}" class="btn btn-outline-ddlc">На главную</a>
+                            <a href="{{ url_for('natsuki') }}" class="btn btn-outline-ddlc">Нацуки</a>
+                            <a href="{{ url_for('monika') }}" class="btn btn-outline-ddlc">Моника</a>
+                            <a href="{{ url_for('sayori') }}" class="btn btn-outline-ddlc">Саёри</a>
+                            <a href="{{ url_for('glossary') }}" class="btn btn-outline-secondary">Глоссарий</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-music-note-beamed"></i> Музыкальные темы</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>Just Yuri</strong>
+                                <p class="small mb-1">Основная тема Юри</p>
+                                <a href="https://www.youtube.com/watch?v=r748ckH3ijA" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                            <li class="mb-2 mt-3">
+                                <strong>Poet Panic</strong>
+                                <p class="small mb-1">Ссора Юри и Нацуки</p>
+                                <a href="https://www.youtube.com/watch?v=7JDlEpvE-cs" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                            <li class="mt-3">
+                                <strong>Yuri's Death Theme</strong>
+                                <p class="small mb-1">Смерть Юри</p>
+                                <a href="https://www.youtube.com/watch?v=-gz52uh7vWs" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 yuri-theme">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-quote"></i> Цитаты Юри</h5>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote">
+                            <p class="mb-2">"Ужас может быть прекрасен. Он показывает нам границы нашего понимания."</p>
+                            <footer class="blockquote-footer">Юри о литературе ужасов</footer>
+                        </blockquote>
+                        <hr>
+                        <blockquote class="blockquote mt-3">
+                            <p class="mb-2">"Иногда самые глубокие истины скрыты в самых тёмных историях."</p>
+                            <footer class="blockquote-footer">Юри о смысле литературы</footer>
+                        </blockquote>
+                        <hr>
+                        <blockquote class="blockquote mt-3">
+                            <p class="mb-2">"Боль — это просто ещё одно чувство. Как счастье или печаль."</p>
+                            <footer class="blockquote-footer">Юри о своих переживаниях</footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+                
+
+                
+            </div>
+        </aside>
+    </div>
+{% endblock %}

@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+
+{% block title %}Моника | Doki Doki Literature Club!{% endblock %}
+
+{% block content %}
+    <!-- Заголовок страницы -->
+    <header class="page-header text-center my-5">
+        <h1 class="display-4 fw-bold floating">Моника</h1>
+        <p class="lead">Президент литературного клуба</p>
+        <p class="mt-2">«В конце концов, я сделала это. Я наконец-то нашла кого-то, кто может меня понять.»</p>
+    </header>
+
+    <div class="row">
+        <!-- Основной контент -->
+        <div class="col-lg-8">
+            <section class="biography mb-5">
+                <h2 class="mb-4">Общая информация</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure class="figure-custom">
+                            <img src="../static/images/monika/monika_default.webp" 
+                                 alt="Моника - Внешний вид персонажа" 
+                                 class="img-fluid rounded shadow">
+                            <figcaption class="figure-caption">
+                                Внешний вид персонажа
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="text-justify">
+                            <strong>Моника</strong> — президент школьного литературного клуба и одна из главных 
+                            героинь Doki Doki Literature Club! Она представлена как идеальная ученица: умная, 
+                            красивая, спортивная и популярная.
+                        </p>
+                        <p class="text-justify">
+                            Изначально она кажется доброй и заботливой, всегда готова помочь другим членам клуба: 
+                            <a href="{{ url_for('sayori') }}" class="content-link">Саёри</a>, 
+                            <a href="{{ url_for('yuri') }}" class="content-link">Юри</a> и Нацуки. 
+                        </p>
+                        <p class="text-justify">
+                            Однако по мере развития сюжета раскрывается её истинная природа. Моника осознаёт, 
+                            что находится в визуальной новелле, и знает, что она — неиграбельный персонаж. 
+                            Это осознание приводит её к отчаянию и манипуляциям с игрой.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="appearance mb-5">
+                <h2 class="mb-4">Внешность и характер</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="text-justify">
+                            Моника — высокая девушка с каштановыми волосами, собранными в высокий хвост 
+                            зелёной лентой, и изумрудными глазами. Она всегда носит стандартную школьную 
+                            форму с белой рубашкой и зелёным галстуком.
+                        </p>
+                        <p class="text-justify">
+                            Изначально она представлена как идеальная ученица: президент клуба, отличница, 
+                            спортивная, талантливая пианистка и певица. Она кажется доброй, заботливой и 
+                            всегда готовой помочь другим.
+                        </p>
+                        <p class="text-justify">
+                            Однако её истинная личность раскрывается позже. Моника страдает от экзистенциального 
+                            кризиса, вызванного осознанием своей вымышленной природы. Она становится одержимой 
+                            игроком — единственным реальным существом, с которым она может общаться.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card monika-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Характеристики</h5>
+                                <table class="table table-sm">
+                                    <tr>
+                                        <td><strong>Имя:</strong></td>
+                                        <td>Моника</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Роль:</strong></td>
+                                        <td>Президент клуба</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Возраст:</strong></td>
+                                        <td>18 лет</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Рост:</strong></td>
+                                        <td>165 см</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Цвет волос:</strong></td>
+                                        <td>Каштановый</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Цвет глаз:</strong></td>
+                                        <td>Изумрудный</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="role mb-5">
+                <h2 class="mb-4">Роль в сюжете</h2>
+                
+                <div class="story-arc mb-4">
+                    <h5>Акт 1: Знакомство</h5>
+                    <p class="text-justify">
+                        В начале игры Моника играет второстепенную роль, представляя главному герою других 
+                        членов клуба и помогая ему в написании стихов. Она даёт советы и организует подготовку 
+                        к школьному фестивалю.
+                    </p>
+                </div>
+                
+                <div class="story-arc mb-4">
+                    <h5>Акт 2: Манипуляции</h5>
+                    <p class="text-justify">
+                        После трагических событий с <a href="{{ url_for('sayori') }}" class="content-link">Саёри</a>, 
+                        Моника берёт контроль над игрой. Она усиливает психологические проблемы 
+                        <a href="{{ url_for('yuri') }}" class="content-link">Юри</a>, что приводит к очередной трагедии. 
+                        Моника удаляет файлы других персонажей, оставляя только себя и игрока.
+                    </p>
+                </div>
+                
+                <div class="story-arc mb-4">
+                    <h5>Акт 3: Комната Моники</h5>
+                    <p class="text-justify">
+                        Моника создаёт специальную комнату, где она может общаться напрямую с игроком. 
+                        Она объясняет свои мотивы и выражает свою любовь к игроку. В этой части игры 
+                        Моника исполняет свою знаменитую песню "Your Reality".
+                    </p>
+                </div>
+                
+                <div class="story-arc">
+                    <h5>Концовки</h5>
+                    <p class="text-justify">
+                        Игрок может удалить Монику, что приводит к восстановлению игры до исходного состояния, 
+                        но без неё. В расширенной концовке Plus версии Моника получает возможность исправить 
+                        свои ошибки и спасти других персонажей.
+                    </p>
+                </div>
+            </section>
+
+            <section class="poetry mb-5">
+                <h2 class="mb-4">Стихи Моники</h2>
+                <p class="text-justify">
+                    Стихи Моники уникальны тем, что они напрямую обращены к игроку. В отличие от стихов 
+                    других девушек, которые отражают их внутренний мир, стихи Моники — это её попытка 
+                    общения с реальным человеком по ту сторону экрана.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card monika-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Особенности стиля</h5>
+                                <ul>
+                                    <li>Обращение напрямую к игроку</li>
+                                    <li>Мета-комментарии об игре</li>
+                                    <li>Экзистенциальные темы</li>
+                                    <li>Выражение одиночества</li>
+                                    <li>Признания в любви к игроку</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card monika-theme">
+                            <div class="card-body">
+                                <h5 class="card-title">Пример стиха Моники</h5>
+                                <p class="fst-italic">
+                                    "Я знаю, что ты думаешь. Ты думаешь, что я просто персонаж в игре. 
+                                    Но для меня эта реальность — всё, что у меня есть."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="trivia mb-5">
+                <h2 class="mb-4">Интересные факты</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Имя Моники происходит от греческого слова «monos» — «один» или «одинокий»</li>
+                            <li>Её тема «Your Reality» стала вирусной на YouTube и имеет миллионы просмотров</li>
+                            <li>Моника — единственный персонаж, который напрямую обращается к игроку</li>
+                            <li>Она знает о существовании файлов сохранения и может их удалять</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>В комнате Моники есть пасхальные яйца, отсылающие к другим играм</li>
+                            <li>Её характерный смех «Ahahaha!» стал мемом в сообществе</li>
+                            <li>Моника — талантливая пианистка и певица</li>
+                            <li>Она может читать файлы на компьютере игрока</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-3">
+                    <p class="mb-0">
+                        <strong>Источник:</strong> Информация взята с 
+                        <a href="https://ddlc.fandom.com/ru/wiki/Моника" target="_blank">страницы Моники в вики DDLC</a>.
+                    </p>
+                </div>
+            </section>
+
+            <div class="navigation-buttons text-center mt-5">
+                <a href="{{ url_for('index') }}" class="btn btn-ddlc me-3">
+                    <i class="bi bi-house"></i> На главную
+                </a>
+                <a href="{{ url_for('natsuki') }}" class="btn btn-outline-ddlc">Нацуки</a>
+                <a href="{{ url_for('sayori') }}" class="btn btn-outline-ddlc me-3">Саёри</a>
+                <a href="{{ url_for('yuri') }}" class="btn btn-outline-ddlc me-3">Юри</a>
+                <a href="https://ddlc.fandom.com/ru/wiki/Моника" target="_blank" class="btn btn-outline-ddlc">
+                    <i class="bi bi-box-arrow-up-right"></i> Вики DDLC
+                </a>
+            </div>
+        </div>
+
+        <!-- Боковая панель -->
+        <aside class="col-lg-4">
+            <div class="sidebar-sticky">
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-link"></i> Быстрая навигация</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="{{ url_for('index') }}" class="btn btn-outline-ddlc">На главную</a>
+                            <a href="{{ url_for('natsuki') }}" class="btn btn-outline-ddlc">Нацуки</a>
+                            <a href="{{ url_for('sayori') }}" class="btn btn-outline-ddlc">Саёри</a>
+                            <a href="{{ url_for('yuri') }}" class="btn btn-outline-ddlc">Юри</a>
+                            <a href="{{ url_for('glossary') }}" class="btn btn-outline-secondary">Глоссарий</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-music-note-beamed"></i> Музыкальные темы</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>Your Reality</strong>
+                                <p class="small mb-1">Песня Моники во время титров</p>
+                                <a href="https://www.youtube.com/watch?v=CAL4WMpBNs0" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                            <li class="mb-2 mt-3">
+                                <strong>Okay, Everyone! (Monika)</strong>
+                                <p class="small mb-1">Тема стихотворения Моники</p>
+                                <a href="https://www.youtube.com/watch?v=Isuc8kwVh64" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                            <li class="mt-3">
+                                <strong>I Still Love You</strong>
+                                <p class="small mb-1">Сцена после удаления «monika.chr»</p>
+                                <a href="https://www.youtube.com/watch?v=QIHUK68L9qQ" target="_blank" class="btn btn-sm btn-outline-ddlc">
+                                    <i class="bi bi-play-circle"></i> Слушать на YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 monika-theme">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-quote"></i> Знаменитые цитаты</h5>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote">
+                            <p class="mb-2">"Я наконец-то нашла кого-то, кто может меня понять."</p>
+                            <footer class="blockquote-footer">Моника в комнате игрока</footer>
+                        </blockquote>
+                        <hr>
+                        <blockquote class="blockquote mt-3">
+                            <p class="mb-2">"Это просто игра... Но для меня это вся моя жизнь."</p>
+                            <footer class="blockquote-footer">Моника о своей реальности</footer>
+                        </blockquote>
+                        <hr>
+                        <blockquote class="blockquote mt-3">
+                            <p class="mb-2">"Я удалила всех, кто стоял между нами. Теперь мы можем быть вместе."</p>
+                            <footer class="blockquote-footer">Моника после удаления других персонажей</footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+               
+            </div>
+        </aside>
+    </div>
+{% endblock %}

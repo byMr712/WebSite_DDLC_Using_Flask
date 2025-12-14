@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Doki Doki Literature Club{% endblock %}</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Иконки Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body class="ddlc-theme">
+    <!-- Главная навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="bi bi-heart-fill"></i> DDLC
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'index' %}active{% endif %}" href="{{ url_for('index') }}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'natsuki' %}active{% endif %}" href="{{ url_for('natsuki') }}">Нацуки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'monika' %}active{% endif %}" href="{{ url_for('monika') }}">Моника</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'sayori' %}active{% endif %}" href="{{ url_for('sayori') }}">Саёри</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'yuri' %}active{% endif %}" href="{{ url_for('yuri') }}">Юри</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'glossary' %}active{% endif %}" href="{{ url_for('glossary') }}">Глоссарий</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">Об авторе</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container mt-5 pt-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Doki Doki Literature Club</h5>
+                    <p>Фан-сайт, посвящённый визуальной новелле от Team Salvato</p>
+                    <p class="disclaimer">Все права принадлежат оригинальным правообладателям. Сайт создан в образовательных целях.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>© 2025 Проект курсовой работы</p>
+                    <p>Все изображения взяты из открытых источников</p>
+                    <div class="footer-links">
+                        <a href="{{ url_for('about') }}" class="me-3">Об авторе</a>
+                        <a href="{{ url_for('glossary') }}" class="me-3">Глоссарий</a>
+                        <a href="https://ddlc.moe" target="_blank" class="me-3">Официальный сайт</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

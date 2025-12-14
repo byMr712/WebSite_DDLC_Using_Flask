@@ -1,0 +1,685 @@
+/* Основные стили для сайта Doki Doki Literature Club */
+
+:root {
+    --pink-primary: #ff66aa;
+    --pink-dark: #cc5288;
+    --pink-light: #ff99cc;
+    --purple-primary: #aa66cc;
+    --blue-primary: #6699ff;
+    --yellow-primary: #ffcc66;
+    --text-dark: #333344;
+    --text-light: #f8f9fa;
+    --bg-light: #fff5f9;
+}
+
+/* Общие стили */
+body.ddlc-theme {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding-top: 76px; /* Отступ для фиксированной навигации */
+    background-image: linear-gradient(to bottom, #fff5f9, #fff0f5);
+}
+
+/* Навигация */
+.navbar {
+    background: linear-gradient(135deg, var(--pink-primary), var(--purple-primary));
+    box-shadow: 0 4px 12px rgba(255, 102, 170, 0.3);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-brand i {
+    color: white;
+    margin-right: 8px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin: 0 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    background-color: white;
+    color: var(--pink-primary) !important;
+    font-weight: bold;
+}
+
+/* Заголовки страниц */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255,102,170,0.1), rgba(170,102,204,0.1));
+    border-radius: 20px;
+    border-left: 6px solid var(--pink-primary);
+}
+
+.page-header h1 {
+    color: var(--pink-primary);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.page-header .lead {
+    color: var(--purple-primary);
+    font-size: 1.3rem;
+}
+
+/* Карточки персонажей */
+.character-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(255,102,170,0.2);
+    margin-bottom: 2rem;
+}
+
+.character-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255,102,170,0.3);
+}
+
+.character-card .card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--pink-primary);
+}
+
+.character-card .card-body {
+    padding: 1.5rem;
+}
+
+.character-card .card-title {
+    color: var(--pink-primary);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--pink-light);
+    padding-bottom: 0.5rem;
+}
+
+/* Карусель */
+.ddlc-carousel {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin: 3rem 0;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 1.5rem;
+    bottom: 40px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,102,170,0.8);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Цветовые темы для персонажей */
+.monika-theme {
+    border-color: var(--pink-primary);
+}
+
+.monika-theme .card-title {
+    color: var(--pink-primary);
+}
+
+.sayori-theme {
+    border-color: var(--blue-primary);
+}
+
+.sayori-theme .card-title {
+    color: var(--blue-primary);
+}
+
+.yuri-theme {
+    border-color: var(--purple-primary);
+}
+
+.yuri-theme .card-title {
+    color: var(--purple-primary);
+}
+
+.natsuki-theme {
+    border-color: var(--yellow-primary);
+}
+
+.natsuki-theme .card-title {
+    color: var(--yellow-primary);
+}
+
+/* Кнопки */
+.btn-ddlc {
+    background: linear-gradient(135deg, var(--pink-primary), var(--purple-primary));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+.btn-ddlc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255,102,170,0.4);
+    color: white;
+}
+
+.btn-outline-ddlc {
+    border: 2px solid var(--pink-primary);
+    color: var(--pink-primary);
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-ddlc:hover {
+    background-color: var(--pink-primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Изображения с подписями */
+.figure-custom {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.figure-custom img {
+    border-radius: 15px;
+    border: 4px solid var(--pink-light);
+    transition: transform 0.3s ease;
+}
+
+.figure-custom img:hover {
+    transform: scale(1.03);
+}
+
+.figure-caption {
+    font-style: italic;
+    color: var(--purple-primary);
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+/* Футер */
+.footer {
+    background: linear-gradient(135deg, #333344, #222233);
+    color: white;
+    border-top: 6px solid var(--pink-primary);
+}
+
+.footer h5 {
+    color: var(--pink-light);
+    font-weight: bold;
+}
+
+.footer a {
+    color: var(--pink-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: black;
+    margin-top: 1rem;
+}
+
+/* Глоссарий */
+.glossary-term {
+    background: white;
+    border-left: 5px solid var(--pink-primary);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.glossary-term h4 {
+    color: var(--pink-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body.ddlc-theme {
+        padding-top: 66px;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .character-card .card-img-top {
+        height: 250px;
+    }
+}
+
+/* Анимации */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Ссылки */
+.content-link {
+    color: var(--purple-primary);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px dotted var(--purple-primary);
+    transition: all 0.3s ease;
+}
+
+.content-link:hover {
+    color: var(--pink-primary);
+    border-bottom: 2px solid var(--pink-primary);
+}
+
+
+    .author-card {
+        background: white;
+        border-left: 6px solid var(--pink-primary);
+    }
+    
+    .avatar-placeholder {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #fff5f9, #ffe6f2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid var(--pink-light);
+        margin: 0 auto;
+    }
+    
+    .author-badges .badge {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .bg-pink { background-color: var(--pink-primary) !important; }
+    .bg-purple { background-color: var(--purple-primary) !important; }
+    .bg-blue { background-color: var(--blue-primary) !important; }
+    .bg-yellow { background-color: var(--yellow-primary) !important; }
+    
+    .tech-card, .feature-card, .contact-info, .project-info {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .requirements-list {
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+    
+    .disclaimer {
+        background-color: #fff3cd;
+        border-left: 4px solid #ffc107;
+    }
+
+    /* Стили для глоссария с поиском */
+.glossary-search {
+    background: linear-gradient(135deg, rgba(255,102,170,0.1), rgba(170,102,204,0.1));
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.glossary-search .input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#glossarySearch:focus {
+    border-color: var(--pink-primary);
+    box-shadow: 0 0 0 0.25rem rgba(255,102,170,0.25);
+}
+
+.glossary-category h2 {
+    color: var(--pink-primary);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.glossary-term {
+    background: white;
+    border-left: 5px solid var(--purple-primary);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.glossary-term:hover {
+    transform: translateX(5px);
+}
+
+.term-title {
+    color: var(--pink-primary);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.term-title:before {
+    content: "•";
+    color: var(--pink-primary);
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.term-definition {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.term-example {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--blue-primary);
+    font-style: italic;
+}
+
+/* Стили для таблиц в глоссарии */
+.glossary-term table {
+    margin-top: 1rem;
+}
+
+.glossary-term table th {
+    background-color: rgba(255,102,170,0.1);
+    color: var(--pink-primary);
+    font-weight: bold;
+}
+
+.glossary-term table td {
+    vertical-align: middle;
+}
+
+/* Стили для страниц персонажей */
+.character-traits {
+    margin: 10px 0;
+}
+
+.character-traits .badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.story-arc {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+}
+
+.monika-theme .story-arc {
+    border-left-color: var(--pink-primary);
+}
+
+.sayori-theme .story-arc {
+    border-left-color: var(--blue-primary);
+}
+
+.yuri-theme .story-arc {
+    border-left-color: var(--purple-primary);
+}
+
+.story-arc h5 {
+    color: inherit;
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для боковых панелей */
+.sidebar-sticky {
+    position: sticky;
+    top: 90px;
+}
+
+.card .card-header {
+    background: linear-gradient(135deg, var(--pink-primary), var(--purple-primary));
+    color: white;
+    font-weight: bold;
+}
+
+/* Цвета для иконок */
+.text-pink { color: var(--pink-primary); }
+.text-purple { color: var(--purple-primary); }
+.text-blue { color: var(--blue-primary); }
+
+/* Стили для модальных окон */
+.modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--pink-primary), var(--purple-primary));
+    color: white;
+}
+
+.modal-body img {
+    border-radius: 10px;
+    border: 3px solid var(--pink-light);
+}
+
+/* Стили для системных требований и информации об игре */
+.game-specs {
+    background: linear-gradient(135deg, rgba(255,102,170,0.05), rgba(170,102,204,0.05));
+    border: 1px solid var(--pink-light);
+}
+
+.game-specs h5 {
+    color: var(--pink-primary);
+}
+
+/* Стили для системы написания стихов */
+.poetry-system .card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.poetry-system .card:hover {
+    transform: translateY(-10px);
+}
+
+.poetry-system .card-body {
+    padding: 2rem;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.glossary-term, .character-card, .poetry-system .card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Задержки для анимаций */
+.glossary-term:nth-child(2) { animation-delay: 0.1s; }
+.glossary-term:nth-child(3) { animation-delay: 0.2s; }
+.glossary-term:nth-child(4) { animation-delay: 0.3s; }
+
+.character-card:nth-child(2) { animation-delay: 0.1s; }
+.character-card:nth-child(3) { animation-delay: 0.2s; }
+.character-card:nth-child(4) { animation-delay: 0.3s; }
+
+.poetry-system .card:nth-child(2) { animation-delay: 0.1s; }
+.poetry-system .card:nth-child(3) { animation-delay: 0.2s; }
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .glossary-search .input-group {
+        flex-direction: column;
+    }
+    
+    .glossary-search .input-group input {
+        border-radius: 25px 25px 0 0;
+        margin-bottom: -1px;
+    }
+    
+    .glossary-search .input-group button {
+        border-radius: 0 0 25px 25px;
+        width: 100%;
+    }
+    
+    .sidebar-sticky {
+        position: static;
+        margin-top: 2rem;
+    }
+    
+    .character-traits .badge {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+.mental-health-resources {
+    background: linear-gradient(135deg, rgba(102, 153, 255, 0.1), rgba(102, 153, 255, 0.05));
+    border-left: 4px solid var(--blue-primary);
+}
+    
+.relationship-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--blue-primary);
+}
+    
+.relationship-item h5 {
+    color: var(--blue-primary);
+    margin-bottom: 0.5rem;
+}
+
+.natsuki-theme {
+    border-color: var(--yellow-primary);
+}
+    
+.natsuki-theme .card-title {
+    color: var(--yellow-primary);
+}
+    
+.family-violence-resources {
+    background: linear-gradient(135deg, rgba(255, 204, 102, 0.1), rgba(255, 204, 102, 0.05));
+    border-left: 4px solid var(--yellow-primary);
+}
+    
+.tsundere .card {
+    border: 2px solid var(--yellow-primary);
+}
+    
+.hobbies .card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+    
+.hobbies .card:hover {
+    transform: translateY(-5px);
+}
+    
+.relationship-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--yellow-primary);
+}
+    
+.relationship-item h5 {
+    color: var(--yellow-primary);
+    margin-bottom: 0.5rem;
+}
+
+.mental-health-resources {
+    background: linear-gradient(135deg, rgba(170, 102, 204, 0.1), rgba(170, 102, 204, 0.05));
+    border-left: 4px solid var(--purple-primary);
+}
+
+.obsessive-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--purple-primary);
+}
+
+.poem-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--purple-primary);
+}
+
+.hobbies {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+

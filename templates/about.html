@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+
+{% block title %}Об авторе | Doki Doki Literature Club{% endblock %}
+
+{% block content %}
+    <!-- Заголовок страницы -->
+    <header class="page-header text-center my-5">
+        <h1 class="display-4 fw-bold floating">Сведения об авторе сайта</h1>
+        <p class="lead">Создатель фан-сайта по Doki Doki Literature Club</p>
+        <p class="mt-2">Курсовая работа по веб-технологиям</p>
+    </header>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="author-card p-5 rounded shadow">
+                <div class="text-center mb-5">
+                    <div class="author-avatar mx-auto mb-4">
+                        <div class="avatar-placeholder">
+                            <i class="bi bi-person-circle" style="font-size: 120px; color: var(--pink-primary);"></i>
+                        </div>
+                    </div>
+                    
+                    <h2 class="mb-3">Георгий Сергеев</h2>
+                    <p class="text-muted mb-4">Студент ИСТб-25-2</p>
+                    
+                    <div class="author-badges mb-4">
+                        <span class="badge bg-pink me-2">Веб-разработчик</span>
+                        <span class="badge bg-pink me-2">Разработчик игр</span>
+
+                    </div>
+                </div>
+                
+                <div class="author-info">
+                    <h3 class="mb-4">О работе</h3>
+                    <p class="text-justify mb-4">
+                        Этот сайт был создан в рамках курсовой работы по веб-технологиям. Цель проекта — 
+                        продемонстрировать навыки создания многостраничного сайта с использованием современных 
+                        веб-технологий: Flask, Bootstrap 5, HTML5 и CSS3.
+                    </p>
+                    <p class="text-justify mb-4">
+                        Тематика сайта выбрана не случайно — <b>Doki Doki Literature Club</b> является 
+                        примером того, как видеоигры могут поднимать важные социальные и психологические 
+                        вопросы, экспериментировать с форматом интерактивного повествования,
+                        а также это просто моя любимая игра!
+                    </p>
+                    
+                    <h3 class="mb-4 mt-5">Техническая реализация</h3>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="feature-card p-3 mb-3 rounded">
+                                <h5 class="mb-2">Frontend</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle me-2"></i> HTML5 + CSS3</li>
+                                    <li><i class="bi bi-check-circle me-2"></i> Bootstrap 5</li>
+                                    <li><i class="bi bi-check-circle me-2"></i> JavaScript</li>
+                                    <li><i class="bi bi-check-circle me-2"></i> Адаптивный дизайн</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card p-3 mb-3 rounded">
+                                <h5 class="mb-2">Backend</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle me-2"></i> Python Flask</li>
+                                    <li><i class="bi bi-check-circle me-2"></i> Шаблонизатор Jinja2</li>
+                                    <li><i class="bi bi-check-circle me-2"></i> Статические файлы CSS</li>
+                                    <li><i class="bi bi-check-circle me-2"></i> Visual Studio Code</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-4 mt-5">Основные функции сайта</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="feature-card text-center p-3 rounded">
+                                <h5>6+ страниц</h5>
+                                <p class="small">Полноценная навигация по сайту</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="feature-card text-center p-3 rounded">
+                                <h5>Карусель Bootstrap</h5>
+                                <p class="small">Интерактивный слайдер изображений</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="feature-card text-center p-3 rounded">
+                                <h5>Перекрёстные ссылки</h5>
+                                <p class="small">Связи между страницами персонажей</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-4 mb-3">
+                            <div class="feature-card text-center p-3 rounded">
+                                <h5>Глоссарий</h5>
+                                <p class="small">Термины и понятия по теме</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="feature-card text-center p-3 rounded">
+                                <h5>Уникальный дизайн</h5>
+                                <p class="small">Стилизация в тематике DDLC</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="feature-card text-center p-3 rounded">
+                                <h5>Адаптивность</h5>
+                                <p class="small">Корректное отображение на всех устройствах</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-4 mt-5">Требования к курсовой работе</h3>
+                    <div class="requirements-list">
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6>• Не менее 4 страниц</h6>
+                                <p class="small text-muted mb-0">Реализовано: Главная + 3 страницы персонажей + Глоссарий + Об авторе</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6>• Наличие картинок на каждой странице</h6>
+                                <p class="small text-muted mb-0">Все страницы содержат тематические изображения с подписями и alt-текстом</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6>• Перекрёстные ссылки между страницами</h6>
+                                <p class="small text-muted mb-0">Персонажи ссылаются друг на друга, главная страница ссылается на всех</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6>• Главная навигация</h6>
+                                <p class="small text-muted mb-0">Фиксированное меню с подсветкой активной страницы</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6>• Ссылки на внешние сайты</h6>
+                                <p class="small text-muted mb-0">Официальный сайт игры, Википедия, ресурсы о психическом здоровье</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6>• Стили в отдельных классах</h6>
+                                <p class="small text-muted mb-0">Все стили вынесены в CSS-классы в отдельном файле</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6>• Использование Bootstrap</h6>
+                                <p class="small text-muted mb-0">Bootstrap 5 для сетки, компонентов и карусели</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6>• Виджет карусель</h6>
+                                <p class="small text-muted mb-0">Карусель Bootstrap на главной странице</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-4 mt-5">Контакты и ссылки</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-info p-3 rounded mb-3">
+                                <h5 class="mb-3">Контакты автора</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="bi bi-envelope me-2"></i>
+                                        <span>dzgrok@gmail.com</span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-globe me-2"></i>
+                                        <a href="https://Mr712.ru" target="_blank">Mr712.ru</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="{{ url_for('index') }}" class="btn btn-ddlc me-3">
+                            <i class="bi bi-house"></i> На главную
+                        </a>
+                        <a href="{{ url_for('glossary') }}" class="btn btn-outline-ddlc me-3">Глоссарий</a>
+                        <a href="https://ddlc.moe" target="_blank" class="btn btn-outline-ddlc">
+                            <i class="bi bi-box-arrow-up-right"></i> Официальный сайт DDLC
+                        </a>
+                    </div>
+                    
+                    <div class="disclaimer mt-5 p-3 rounded">
+                        <h6 class="mb-2">Правообладателям</h6>
+                        <p class="small mb-0">
+                            Данный сайт является фан-проектом, созданным в образовательных целях. 
+                            Doki Doki Literature Club является собственностью Team Salvato. 
+                            Все права на оригинальные персонажи, сюжет и материалы принадлежат их законным правообладателям. 
+                            Изображения используются в соответствии с принципом добросовестного использования.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<style>
+
+</style>
+{% endblock %}
